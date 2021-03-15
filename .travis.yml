@@ -1,0 +1,17 @@
+language: python
+python:
+  - "3.7"
+dist: xenial
+os: linux
+
+jobs:
+    ## windows build
+    - os: windows
+      language: shell
+      before_install:
+        - choco install python --version 3.7.7
+        - export PATH="/c/Python37:/c/Python37/Scripts:$PATH"
+        - ln -s /c/Python37/python.exe /c/Python37/python3.exe
+
+script:
+  - python3 -c "import cv2"
