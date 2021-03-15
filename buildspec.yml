@@ -15,10 +15,10 @@ phases:
       - pip install -r requirements.txt
   build:
     commands:
-      - python3 -c "import cv2"
-  post_build:
-    commands:
-      - echo "Packaging completed on `date`"
+      - python -c "import cv2"
+  #post_build:
+  #  commands:
+  #    - echo "Packaging completed on `date`"
 
 #artifacts:
 #  files:
